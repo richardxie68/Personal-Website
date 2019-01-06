@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+
+
+/* makes padding easier to deal with */
+* {
+	box-sizing: border-box;
+	transition: all ease-in-out 250ms;
+}
+
+body {
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+
+@media (min-width: 55rem) {
+    .proj-img {
+        max-width: 55em;
+        height: auto;
+        padding-top: 3em;
+    }
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+.container {
+	width: 95%;
+	max-width: 70em;
+	margin: 0 auto;
+}
+
+.clearfix::after, section::after, footer::after{
+	content: '';
+	display: block;
+	clear: both;
+
+}
+
+/* -- Column System -- */
+
+[class^=col-]{
+	width: 100%;
+	margin-top: 1em;
+}
+
+[class^=col-]::first-child{
+	margin-top: 0;
+}
+
+.col-1 {
+	width: 50%;
+	float: left;
+}
+
+
+@media(min-width: 40rem) {
+
+	[class^=col-]{
+		float: left;
+		padding: 0 .5em;
+		margin-top: 0;
+	}
+	
+	[class^=col-]::first-child{
+		padding-left: 0;
+	}
+
+	[class^=col-]::last-child{
+		padding-right: 0;
+	}
+
+	.col-3 {
+		width: 50%;
+	}
+}
+
+
+/* -- TYPOGRAPHY -- */
+h1 {
+	font-weight: 300;
+	font-size: 1.8rem;
+	margin-top: 0;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.45;
+}
+
+p:last-of-type{
+    margin-bottom: 0;
+}
+
+.myTitle {
+	font-size: 2.5rem;
+	margin-bottom: 1.5em;
+	font-weight: 900;
+	margin-top: 1em;
+}
+
+.myTitle span {
+	font-weight: 300;
+	display: block;
+	font-size: .9em;
+}
+
+.myTitle-cta {
+	margin: 0 0 .5em;
+}
+
+.unstyled-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+    color: white;
+}
+
+@media (min-width: 60rem) {
+	.title{
+		font-size: 3.7rem;
+	}
+}
+
+/* -- BUTTONS -- */
+.button {
+	display: inline-block;
+	font-size: 1.15rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-width: 2px;
+	border-style: solid;
+	padding: .5em 1.75em;
+}
+
+@media (min-width: 60rem){
+	.button {
+		font-size: 1.5rem;
+	}
+}
+
+.button-small {
+	font-size: .7rem;
+	font-weight: 700;
+
+}
+
+.button-accent {
+	color: white;
+	border-color: white;
+}
+
+.button-accent:hover, .button-accent:focus {
+	background: #003366;
+	color: white;
+}
+
+.button-dark {
+	color: white;
+	border-color: white;
+}
+
+.button-dark:hover, .button-dark:focus {
+	background: #232323;
+	color: #ffd700;
+} 
+
+.button-proj-white {
+    color: #003366;
+    border-color: #003366;
+}
+
+.button-proj-white:hover, .button-proj-white:focus {
+    background: #003366;
+    color:white;
+}
+
+.button-proj-blue {
+    color: white;
+    border-color: white;
+}
+
+.button-proj-blue:hover, .button-proj-blue:focus {
+    background: white;
+    color: #003366;
+}
+
+/* -- HEADER SECTION -- */
+header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0.5em;
+}
+
+/* -- TOOLBOX SECTION -- */
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin: 0.5em;
+}
+
+nav a {
+	font-weight: 900;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1rem;
+	padding: .5em;
+	color: #003366;
+}
+
+
+nav a:hover, nav a:focus {
+	color: #FFCC66;
+}
+
+
+@media (min-width: 78rem) {
+	.logo {
+		float: left;
+	}
+	nav {
+		float: right;
+		margin-top: 2.1em;
+	}
+}
+
+/* -- INTRO SECTION HOME -- */
+.home-hero {
+	background-image: url(../images/background.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 10em 0;
+	color: #003366;
+	background-attachment: fixed;
+}
+
+@media (min-width: 60rem){
+	.home-hero {
+		height: 100vh;
+		padding-top: 30vh;
+	}
+}
+
+/* -- INTRO SECTION RESUME -- */
+.home-hero1 {
+	background-image: url(../images/background1.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 10em 0;
+	color: #003366;
+	background-attachment: fixed;
+}
+
+@media (min-width: 60rem){
+	.home-hero1 {
+		height: 100vh;
+		padding-top: 30vh;
+	}
+}
+
+/* -- INTRO SECTION PROJECTS -- */
+.home-hero2 {
+	background-image: url(../images/background2.png);
+    height: 100%;
+	background-size: cover;
+	background-position: center;
+	padding: 10em 0;
+	color: white;
+	background-attachment: fixed;
+}
+
+@media (min-width: 60rem){
+	.home-hero2 {
+		height: 100vh;
+		padding-top: 30vh;
+	}
+}
+
+/* -- ABOUT SECTION -- */
+
+.home-about-textbox {
+	background-color: #003366;
+	padding: 4.5em;
+	width: 100vw;
+	outline: 4px solid white;
+	outline-offset: -2.5em;
+	color: white;
+	position: relative;
+}
+
+
+.home-about-textbox h1 {
+	color: white;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: .75em;
+	background: #003366;
+	padding: 0 0.5em;
+}
+
+
+/* -- PORTFOLIO SECTION -- */
+
+.portfolio {
+    background-color: white;
+    color: #003366;
+}
+
+.port-item {
+	margin: 0;
+	position: relative;
+
+}
+
+.port-item img {
+	display: block;
+}
+
+.port-description {
+	position: absolute;
+	z-index: 100;
+	bottom: 0em;
+	left: 0em;
+	right: 0em;
+	color: white;
+	background: rgba(0, 0, 0, .6); /* sets background colour */
+	padding-bottom: 2em;
+}
+
+.port-description p {
+	margin: 1em;
+}
+
+@media (min-width: 37rem){
+	.port-item {
+		width: 50%;
+		float: left;
+	}
+}
+
+@media (min-width: 60rem){
+	.port-item {
+		width: 25%;
+		overflow: hidden;
+	}
+
+	.port-description {
+		transform: translateY(150%);
+	}
+
+	.port-item:hover .port-description {
+		transform: translateY(0%);
+	}
+}
+
+/* -- CALL TO ACTION (CTA) -- */
+
+.cta {
+	background-color: #003366;
+	padding: 6em 0;
+	color: white;
+
+}
+
+/* -- FOOTER -- */
+footer {
+	background: #232323;
+	color: white;
+	text-align: left;
+	padding: 5em 0;
+}
+
+/* -- PROJECT-BLUE-SECTION -- */
+.proj-blue {
+    background-color: #003366;
+    padding-bottom: 2em;
+    color: white;
+}
+
+
+
+/* -- PROJECT-WHITE-SECTION -- */
+.proj-white {
+    background-color: white;
+    padding-bottom: 2em;
+    color: #003366;
+}
+
+
+
